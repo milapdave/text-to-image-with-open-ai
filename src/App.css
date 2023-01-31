@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+
+
+html, body {
+  width: 100%;
+  height:100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+ background-image: url('BG.jpg');
+ background-size: cover;
+ color: #FFFFFF;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+h1{
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+}
+
+.flex{
+  display: flex;
+}
+
+input[type='text'] {
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  padding: 14px 20px;
+  font-size: 24px;
+  margin:30px 15px;
+}
+
+button {
+  background-color: #6230d8;
   color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  margin:30px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+
+img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
   }
 }
