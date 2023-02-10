@@ -5,29 +5,80 @@ html, body {
   height:100%;
 }
 
+*{
+  box-sizing: border-box;
+}
+
 body {
- background-image: url('BG.jpg');
- background-size: cover;
+ background-color: #121212;
  color: #FFFFFF;
  display: flex;
  flex-direction: column;
  align-items: center;
  text-align: center;
+ position: relative;
 }
 
-form {
+.wapper{
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
   display: flex;
+  padding: 5%;
+  overflow: hidden;
+}
+
+.inner_wapper{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column: 2;
+  padding: 5%;
+  color: #FFFFFF;
+  background: linear-gradient(106.51deg, rgba(255, 255, 255, 0.05) 3.44%, rgba(255, 255, 255, 0.02) 64.82%);
+  backdrop-filter: blur(15px);
+  border-radius: 24px;
+  width: 100%;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.result{
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  text-align: center;
-  color: #FFFFFF;
+}
+
+.wapper::after{
+  content: '';
+  position: absolute;
+  width: 723.06px;
+  height: 723.06px;
+  left: -365px;
+  top: -169.06px;
+  background: linear-gradient(180deg, rgba(0, 194, 255, 0) 0%, #FF29C3 100%);
+  opacity: 0.8;
+  filter: blur(100px);
+  transform: rotate(-17.38deg);z-index: -1;
+}
+
+.wapper::before{
+  content: '';
+  position: absolute;
+  width: 606px;
+  height: 606px;
+  left: 95%;
+  bottom:-5%;
+  background: linear-gradient(180deg, rgba(0, 194, 255, 0) 0%, #FF29C3 100%);
+  opacity: 0.6;
+  filter: blur(100px);
+  z-index: -1;
 }
 
 h1{
   font-weight: 700;
   font-size: 64px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .flex{
@@ -40,15 +91,15 @@ input[type='text'] {
   border-radius: 5px;
   padding: 14px 20px;
   font-size: 24px;
-  margin:30px 15px;
+  margin:30px 15px 30px 0px;
 }
 
 button {
-  background-color: #6230d8;
+  background: #F2672E;
+  border-radius: 4px;
   color: white;
   padding: 14px 20px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   font-weight: 600;
   font-size: 18px;
@@ -58,7 +109,7 @@ button {
 
 img {
   width: 100%;
-  max-width: 400px;
+  /* max-width: 400px; */
   display: block;
   margin: 0 auto;
 }
